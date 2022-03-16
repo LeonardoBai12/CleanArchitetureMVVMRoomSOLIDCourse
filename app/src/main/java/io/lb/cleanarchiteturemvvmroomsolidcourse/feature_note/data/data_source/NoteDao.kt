@@ -1,11 +1,9 @@
 package io.lb.cleanarchiteturemvvmroomsolidcourse.feature_note.data.data_source
 
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import io.lb.cleanarchiteturemvvmroomsolidcourse.feature_note.domain.model.Note
 
+@Dao
 interface NoteDao {
     @Query("SELECT * FROM note")
     fun getAll(): List<Note>
