@@ -13,5 +13,5 @@ class NoteRepositoryImpl(
 
     override suspend fun getAll(): List<Note> = dao.getAll()
 
-    override suspend fun remove(note: Note) = dao.remove(note.id)
+    override suspend fun remove(note: Note) = dao.remove(note)
 }

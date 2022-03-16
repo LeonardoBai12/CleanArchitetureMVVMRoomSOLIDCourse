@@ -1,5 +1,6 @@
 package io.lb.cleanarchiteturemvvmroomsolidcourse.feature_note.data.data_source
 
+import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
@@ -18,6 +19,6 @@ interface NoteDao {
     @Query("DELETE FROM note")
     fun removeAll()
 
-    @Query("DELETE FROM note WHERE id = :id")
-    fun remove(id: Long)
+    @Delete
+    fun remove(note: Note)
 }
